@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Chart - Target Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/chart.css">
+</head>
+
+
+<script>
+
+    var SMD = window.SMD || {};
+    SMD.financeTrackerData = [
+        {
+            year: 2017,
+            target: 7,
+            offset: 3,
+            dataPoints: [
+                {
+                    label: 'Q1',
+                    value: 2
+                },
+                {
+                    label: 'Q2',
+                    value: 3.3
+                },
+                {
+                    label: 'Q3',
+                    value: 5.5
+                },
+                {
+                    label: 'Q4',
+                    value: null
+                }
+            ]
+        },
+        {
+            year: 2016,
+            target: 9,
+            offset: 2,
+            dataPoints: [
+                {
+                    label: 'Q1',
+                    value: -0.7
+                },
+                {
+                    label: 'Q2',
+                    value: 2.7
+                },
+                {
+                    label: 'Q3',
+                    value: 4.5
+                },
+                {
+                    label: 'Q4',
+                    value: 10.8
+                }
+            ]
+        },
+        {
+            year: 2015,
+            target: 10,
+            offset: 2,
+            dataPoints: [
+                {
+                    label: 'Q1',
+                    value: 2.4
+                },
+                {
+                    label: 'Q2',
+                    value: 4.8
+                },
+                {
+                    label: 'Q3',
+                    value: 7.1
+                },
+                {
+                    label: 'Q4',
+                    value: 8.2
+                }
+            ]
+        },
+        {
+            year: 2014,
+            target: 13,
+            offset: 2,
+            dataPoints: [
+                {
+                    label: 'Q1',
+                    value: 2.3
+                },
+                {
+                    label: 'Q2',
+                    value: 5.1
+                },
+                {
+                    label: 'Q3',
+                    value: 6.2
+                },
+                {
+                    label: 'Q4',
+                    value: 16.1
+                }
+            ]
+        }
+    ]
+
+</script>
+
+<body>
+    
+    <div class="grid-container">
+
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-4">
+                
+                <label for="ft-select" class="middle">Select financial year</label>
+
+                <select class="ft-chart-select js-ft-chart-select" id="ft-select">
+                    <option value="2017">2017 - 2018</option>
+                    <option value="2016">2016 - 2017</option>
+                    <option value="2015">2015 - 2016</option>
+                    <option value="2014">2014 - 2015</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="grid-x grid-margin-x">
+            
+            <div class="cell medium-7">
+                
+                <div class="ft-chart-container">
+                    <div class="ft-chart-embed">
+                        <svg id="financeTracker" class="ft-chart" viewBox="0 0 640 360"></svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cell medium-5">
+                    
+                <!-- fake content -->
+                <div class="ft-content">
+                    <!-- 2017 -->
+                    <div class="ft-content_quarter" id="2017q3">
+                        <h1 class="h3">Q3</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore adipisci distinctio, aperiam, tempora optio. Dolorem quas, doloremque adipisci laboriosam fugit a voluptate ut.</p>
+                    </div>
+                    <div class="ft-content_quarter" id="2017q2">
+                        <h1 class="h3">Q2</h1>Aribus voluptatum excepturi unde tempore ipsa ipsum labore adipisci distinctio, aperiam, </p>
+                    </div>
+                    <div class="ft-content_quarter" id="2017q1">
+                        <h1 class="h3">Q1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore adipisci distinctio, aperiam, </p>
+                    </div>
+                    <!-- 2016 -->
+                    <div class="ft-content_quarter" id="2016q4">
+                        <h1 class="h3">Q4</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore.</p>
+                    </div>
+
+                    <div class="ft-content_quarter" id="2016q3">
+                        <h1 class="h3">Q3</h1>
+                        <p>Lorem ipsum doldipisci distinctio, aperiam, tempora optio. Dolorem quas, doloremque adipisci laboriosam fugit a voluptate ut.</p>
+                    </div>
+
+                    <div class="ft-content_quarter" id="2016q2">
+                        <h1 class="h3">Q2</h1>
+                        <p>Lorem ipsum dolor sit amet,io, aperiam, </p>
+                    </div>
+                    <div class="ft-content_quarter" id="2016q1">
+                        <h1 class="h3">Q1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore adipisci distinctio, aperiam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laboriosam voluptate aliquid eaque necessitatibus corporis quisquam delectus voluptatibus, eum eveniet.</p>
+                    </div>
+                    <!-- 2015 -->
+                    <div class="ft-content_quarter" id="2015q4">
+                        <h1 class="h3">Q4</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore.</p>
+                    </div>
+
+                    <div class="ft-content_quarter" id="2015q3">
+                        <h1 class="h3">Q3</h1>
+                        <p>Lorem ipsum doldipisci distinctio, aperiam, tempora optio. Dolorem quas, doloremque adipisci laboriosam fugit a voluptate ut.</p>
+                    </div>
+
+                    <div class="ft-content_quarter" id="2015q2">
+                        <h1 class="h3">Q2</h1>
+                        <p>Lorem ipsum dolor sit amet,io, aperiam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, iste!</p>
+                    </div>
+                    <div class="ft-content_quarter" id="2015q1">
+                        <h1 class="h3">Q1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore adipisci distinctio, aperiam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laboriosam voluptate aliquid eaque necessitatibus corporis quisquam delectus voluptatibus, eum eveniet.</p>
+                    </div>
+                    <!-- 2015 -->
+                    <div class="ft-content_quarter" id="2014q4">
+                        <h1 class="h3">Q4</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nisi labore dolores, deserunt ducimus repellat alias ad saepe laborum odio.</p>
+                    </div>
+
+                    <div class="ft-content_quarter" id="2014q3">
+                        <h1 class="h3">Q3</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur.Lorem ipsum doldipisci distinctio, aperiam, tempora optio. Dolorem quas, doloremque adipisci laboriosam fugit a voluptate ut.</p>
+                    </div>
+
+                    <div class="ft-content_quarter" id="2014q2">
+                        <h1 class="h3">Q2</h1>
+                        <p>Lorem ipsum dolor sit amet,io, aperiam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad, perspiciatis ratione sed omnis. Nesciunt, consequuntur aliquid similique placeat vero repellendus doloribus. Excepturi quis delectus, quas autem. Ad, inventore, consequatur.</p>
+                    </div>
+                    <div class="ft-content_quarter" id="2014q1">
+                        <h1 class="h3">Q1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum excepturi unde tempore ipsa ipsum labore adipisci distinctio, aperiam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laboriosam voluptate aliquid eaque necessitatibus corporis quisquam delectus voluptatibus, eum eveniet.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+    
+
+
+    <script src="js/bundle.js"></script>
+</body>
+</html>
